@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2021_03_19_042656) do
   enable_extension "plpgsql"
 
   create_table "likes", force: :cascade do |t|
-    t.bigint "user_id"
+    t.bigint "tweet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_likes_on_user_id"
+    t.index ["tweet_id"], name: "index_likes_on_tweet_id"
   end
 
   create_table "tweets", force: :cascade do |t|

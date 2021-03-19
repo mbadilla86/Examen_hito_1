@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  def quantity
-    @user = User.all
+  def count
+    @tweet = Tweet.all.count
   end
 end
